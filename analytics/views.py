@@ -1,12 +1,8 @@
-from django.shortcuts import render,get_object_or_404
+from django.shortcuts import get_object_or_404
 from django.shortcuts import render, HttpResponseRedirect, reverse
-from poems.models import Poem, Poet
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-import collections, pymorphy2
-from .PoetAnalytics import MetaPoet, words_counter, top_100
-from django.contrib.auth.decorators import login_required, user_passes_test
-from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from .forms import DictionaryFormPartOfSpeech
+from poems.models import Poem
+from analytics.PoetAnalytics import MetaPoet, words_counter, top_100
+from analytics.forms import DictionaryFormPartOfSpeech
 
 
 
