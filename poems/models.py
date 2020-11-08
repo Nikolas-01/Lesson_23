@@ -1,9 +1,7 @@
-import re
 from django.db import models
 from analytics.PoetAnalytics import MetaPoet
 from django.utils.functional import cached_property
-from django.dispatch import receiver
-from django.db.models.signals import post_save
+
 
 class IsActiveMixin(models.Model):
     is_active = models.BooleanField(default=True)
